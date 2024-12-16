@@ -1,0 +1,117 @@
+ .resume{
+    height: 100%;
+ }
+ .timeline{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+   
+    &__experience,&__education{
+        width: 50%;
+        gap:20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        &__header{
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1rem;
+            letter-spacing: 0.2rem;
+            position: relative;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--background);
+        }
+        &__vertical-timeline-element{
+            padding: 0px 0px 30px 0px;
+            &:last-child{
+                padding:0px;
+            }
+        }
+        .vertical-timeline-element-title-wrapper{
+            display: flex;
+            align-items: center;
+            h3,h4{
+                font-size:15px;
+            }
+            h4{
+                margin-left: 10px;
+            }
+            
+        }
+        .vertical-timeline-element-title-wrapper-description{
+            font-size: 18px;
+        }
+        .vertical-timeline-element-content{
+            box-shadow:none
+        }
+        .vertical-timeline-element-content-arrow{
+            display: none;
+        }
+        .vertical-timeline-element-date{
+            opacity: 1;
+            color: var(--sub-text-color);
+            font-size: 18px;
+        }
+    }
+ }
+ @media (max-width: 1024px) {
+    .timeline {
+      &__experience, &__education {
+        width: 100%; 
+      }
+  
+      .vertical-timeline-element-title-wrapper h3, h4 {
+        font-size: 14px;
+      }
+  
+      .vertical-timeline-element-date {
+        font-size: 16px; 
+      }
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .timeline {
+      flex-direction: column; 
+  
+      &__experience, &__education {
+        width: 100%; 
+      }
+  
+      .vertical-timeline-element-title-wrapper h3, h4 {
+        font-size: 12px; 
+      }
+  
+      .vertical-timeline-element-date {
+        font-size: 14px; 
+      }
+  
+      .vertical-timeline-element-title-wrapper-description {
+        font-size: 16px; 
+      }
+    }
+  }
+  
+ 
+  @media (max-width: 480px) {
+    .timeline {
+      &__experience, &__education {
+        gap: 10px; 
+      }
+      .vertical-timeline-element-title-wrapper h3, h4 {
+        font-size: 10px; 
+      }
+  
+      .vertical-timeline-element-date {
+        font-size: 12px; 
+      }
+  
+      .vertical-timeline-element-title-wrapper-description {
+        font-size: 14px; 
+      }
+    }
+  }
